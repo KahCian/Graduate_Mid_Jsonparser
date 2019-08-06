@@ -10,14 +10,14 @@ public class Md_parser_test {
     }
 
     public String cleos_create_wallet_private(String wallet_name, String ip) {
-        return ip.substring(171 + (wallet_name).length(), 221 + (wallet_name).length());
+        return ip.substring(171 + (wallet_name).length(), 224 + (wallet_name).length());
     }
 
     public String cleos_account_name(String account_name, String ip) { // 계정 ID 추출
         return ip.substring(181 , 181 + (account_name).length());
     }
     public String cleos_account_key(String account_name, String ip) {
-        return ip.substring(222 + (account_name).length(), 272 + (account_name).length());
+        return ip.substring(222 + (account_name).length(), 275 + (account_name).length());
     }
 
 }
