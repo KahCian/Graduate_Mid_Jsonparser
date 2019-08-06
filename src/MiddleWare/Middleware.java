@@ -16,9 +16,8 @@ public class  Middleware {
         String user = "demo";
         //여기에 형 EOS Dev 비밀번호
         String password = "dong2307";
-        String account_name = "test1137";
 //        String command1 = "cleos wallet create --to-console";
-        String command1 = "cleos wallet create --name " + account_name + " --to-console"; // 여기안에 입력하고자 하는 EOS 명령어
+        String command1 = "cleos create key --to-console"; // 여기안에 입력하고자 하는 EOS 명령어
         try {
             Properties config = new Properties();
             config.put("StrictHostKeyChecking", "no");
@@ -47,10 +46,12 @@ public class  Middleware {
                         break;
                     }
 //                    System.out.print(new String(tmp, 0, i));
-                    Md_parser_test Md = new Md_parser_test();
+                    Middleware_parser Md = new Middleware_parser();
                     String result =  new String(tmp, 0, i);
-                    String step_1 = Md.cleos_create_wallet_private(account_name, result);
-                    System.out.println("--------------------result----------------\n" + step_1);
+                    String result2 = Md.cleos_create_key_private(result);
+                    String result3 = Md.cleos_create_key_public(result);
+                    System.out.println("private key is : " + result2);
+                    System.out.println("public key is : " + result3);
                 }
                 if (channel.isClosed()) {
                     System.out.println("Exit Status: "
