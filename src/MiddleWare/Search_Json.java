@@ -50,7 +50,7 @@ public class Search_Json {
         return result_list;
     }
 
-    public HashMap<String, List> Lookup_device_detail(String input, String which){
+    public HashMap<String, List> Lookup_device_detail(String input){
         try {
             JSONParser jsonParser = new JSONParser();
             JSONObject jsonObj = (JSONObject) jsonParser.parse(input);
@@ -69,7 +69,7 @@ public class Search_Json {
                 this.rqster_list = rqster_list.stream()
                         .distinct()
                         .collect(Collectors.toList());
-                if (name.equals("pushdata") && which.equals("pushdata")) {
+                if (name.equals("pushdata")) {
                     String push_data = String.valueOf(data.get("data"));
                     String block_time = String.valueOf(first.get("block_time"));
                     for (int j = 0; j < rqster_list.size(); j++) {
