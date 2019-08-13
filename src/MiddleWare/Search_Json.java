@@ -12,10 +12,9 @@ public class Search_Json {
     String result;
     List<String> result_list = new ArrayList<>();
     List<String> rqster_list = new ArrayList<>();
-    List<String> temp = new ArrayList<>();
     List<String> device_footprint = new ArrayList<>();
     List<String> act_iot = new ArrayList<>();
-    HashMap<String, List> per_iot = new HashMap<String, List>();
+    HashMap<String, List<List>> per_iot = new HashMap<String, List<List>>();
 
 
     public List Parsing_Response(String input, String which){
@@ -50,7 +49,7 @@ public class Search_Json {
         return result_list;
     }
 
-    public HashMap<String, List> Lookup_device_detail(String input){
+    public HashMap<String, List<List>> Lookup_device_detail(String input){
         try {
             JSONParser jsonParser = new JSONParser();
             JSONObject jsonObj = (JSONObject) jsonParser.parse(input);
@@ -73,10 +72,14 @@ public class Search_Json {
                     String push_data = String.valueOf(data.get("data"));
                     String block_time = String.valueOf(first.get("block_time"));
                     for (int j = 0; j < rqster_list.size(); j++) {
+                        List<List> temp = new ArrayList<>();
+                        List<String> temp2 = new ArrayList<>();
+                        // List<String> temp = new ArrayList<>(); 최근조작내역
                         if (rqster_list.get(j).equals(rqster)) {
+                            temp2.add(push_data);
+                            temp2.add(block_time);
                             this.per_iot.put(rqster, temp);
-                            this.per_iot.get(rqster).add(push_data);
-                            this.per_iot.get(rqster).add(block_time);
+                            this.per_iot.get(rqster).add(temp2);
                         }
                     }
                 }
