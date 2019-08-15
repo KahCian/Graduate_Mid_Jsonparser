@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="170fb5cf-5c99-4c98-972d-7e3d11f695f8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MiddleWare/MiddleWare/Search_Json.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MiddleWare/MiddleWare/Search_Json.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MiddleWare/MiddleWare/SubstringTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MiddleWare/MiddleWare/SubstringTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MiddleWare/MiddleWare/Search_Json.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MiddleWare/Search_Json.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MiddleWare/Search_Json.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MiddleWare/SubstringTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MiddleWare/SubstringTest.java" afterDir="false" />
     </list>
@@ -20,28 +19,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/MiddleWare/Search_Json.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-974">
-              <caret line="51" column="36" selection-start-line="51" selection-start-column="36" selection-end-line="51" selection-end-column="36" />
+            <state relative-caret-position="-500">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#568#588#0" expanded="true" />
+                <element signature="e#697#719#0" expanded="true" />
+                <element signature="e#4999#5007#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MiddleWare/SubstringTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="28" column="13" lean-forward="true" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+            <state relative-caret-position="150">
+              <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="29" selection-end-column="11" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#332#352#0" expanded="true" />
-                <element signature="e#74385#74393#0" expanded="true" />
+                <marker date="1565774125301" expanded="true" signature="1120:1408" ph="..." />
               </folding>
             </state>
           </provider>
@@ -75,8 +74,8 @@
         <option value="$PROJECT_DIR$/src/MiddleWare/Md_parser_run.java" />
         <option value="$PROJECT_DIR$/src/MiddleWare/Middleware.java" />
         <option value="$PROJECT_DIR$/src/MiddleWare/MW.java" />
-        <option value="$PROJECT_DIR$/src/MiddleWare/Search_Json.java" />
         <option value="$PROJECT_DIR$/src/MiddleWare/SubstringTest.java" />
+        <option value="$PROJECT_DIR$/src/MiddleWare/Search_Json.java" />
       </list>
     </option>
   </component>
@@ -87,7 +86,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="952" />
+    <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="976" />
     <option name="height" value="1056" />
@@ -98,6 +97,22 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="gr_md" type="58d84e3e:PackageViewProjectNode" />
+              <item name="MiddleWare" type="616d4139:PackageViewModuleNode" />
+            </path>
+            <path>
+              <item name="gr_md" type="58d84e3e:PackageViewProjectNode" />
+              <item name="MiddleWare" type="616d4139:PackageViewModuleNode" />
+              <item name="MiddleWare" type="1f31426a:PackageElementNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -115,29 +130,13 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="gr_md" type="58d84e3e:PackageViewProjectNode" />
-              <item name="MiddleWare" type="616d4139:PackageViewModuleNode" />
-            </path>
-            <path>
-              <item name="gr_md" type="58d84e3e:PackageViewProjectNode" />
-              <item name="MiddleWare" type="616d4139:PackageViewModuleNode" />
-              <item name="MiddleWare" type="1f31426a:PackageElementNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1565717514876" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1565718917995" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -250,12 +249,22 @@
       <option name="presentableId" value="Default" />
       <updated>1561203434280</updated>
       <workItem from="1565598316079" duration="8045000" />
-      <workItem from="1565662653495" duration="20716000" />
+      <workItem from="1565662653495" duration="22123000" />
+      <workItem from="1565748141605" duration="8361000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28761000" />
+    <option name="totallyTimeSpent" value="38529000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -270,14 +279,14 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.5103149" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.37024972" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.44191095" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32967034" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32899022" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32899022" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32899022" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32790446" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -376,17 +385,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MiddleWare/Search_Json.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-974">
-          <caret line="51" column="36" selection-start-line="51" selection-start-column="36" selection-end-line="51" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#568#588#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/util/ArrayList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
@@ -396,12 +394,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MiddleWare/SubstringTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="28" column="13" lean-forward="true" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+        <state relative-caret-position="150">
+          <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="29" selection-end-column="11" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#332#352#0" expanded="true" />
-            <element signature="e#74385#74393#0" expanded="true" />
+            <marker date="1565774125301" expanded="true" signature="1120:1408" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/util/AbstractList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9">
+          <caret line="159" column="11" lean-forward="true" selection-start-line="159" selection-start-column="11" selection-end-line="159" selection-end-column="11" />
+          <folding>
+            <element signature="e#5343#5344#0" expanded="true" />
+            <element signature="e#5400#5401#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MiddleWare/Search_Json.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-500">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#697#719#0" expanded="true" />
+            <element signature="e#4999#5007#0" expanded="true" />
           </folding>
         </state>
       </provider>

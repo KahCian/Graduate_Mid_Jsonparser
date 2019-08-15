@@ -14,20 +14,20 @@ public class SubstringTest {
         String request = "pushdata";
         Search_Json sj = new Search_Json();
         result = sj.Lookup_device_detail(input);
-        System.out.println("-------------------------------------------------");
-        System.out.println(result.keySet()); // key value of result HashMap
-        System.out.println(result); // result
-        System.out.println("-------------------------------------------------");
-        for (int i = 0 ; i < result.keySet().size() ; i++){
-            List<String> device = new ArrayList<String>();
-            device.addAll(result.keySet());
-            System.out.println("----------------------------------------");
-            System.out.println(device.get(i));
-            for (int j = 0 ; j < result.get(device.get(i)).size() ; j++) {
-                System.out.println("==========================================");
-                System.out.println(result.get(device.get(i)).get(j));
-            }
-        }
+//        System.out.println("-------------------------------------------------");
+//        System.out.println(result.keySet()); // key value of result HashMap
+//        System.out.println(result); // result
+//        System.out.println("-------------------------------------------------");
+//        for (int i = 0 ; i < result.keySet().size() ; i++){
+//            List<String> device = new ArrayList<String>();
+//            device.addAll(result.keySet());
+//            System.out.println("----------------------------------------");
+//            System.out.println(device.get(i));
+//            for (int j = 0 ; j < result.get(device.get(i)).size() ; j++) {
+//                System.out.println("==========================================");
+//                System.out.println(result.get(device.get(i)).get(j));
+//            }
+//        }
     }
 }
 

@@ -1,5 +1,4 @@
 package MiddleWare;
-import org.json.simple.ItemList;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -14,7 +13,10 @@ public class Search_Json {
     List<String> rqster_list = new ArrayList<>();
     List<String> device_footprint = new ArrayList<>();
     List<String> act_iot = new ArrayList<>();
+    List<List> test_list = new ArrayList<>();
+    List<String> finallist = new ArrayList<>();
     HashMap<String, List<List>> per_iot = new HashMap<String, List<List>>();
+    HashMap<String, List<String>> real_result = new HashMap<String, List<String>>();
 
 
     public List Parsing_Response(String input, String which){
@@ -74,12 +76,16 @@ public class Search_Json {
                     for (int j = 0; j < rqster_list.size(); j++) {
                         List<List> temp = new ArrayList<>();
                         List<String> temp2 = new ArrayList<>();
+                        temp2.add(rqster);
+                        temp2.add(push_data);
+                        temp2.add(block_time);
                         // List<String> temp = new ArrayList<>(); 최근조작내역
                         if (rqster_list.get(j).equals(rqster)) {
-                            temp2.add(push_data);
-                            temp2.add(block_time);
+                            temp.add(temp2);
                             this.per_iot.put(rqster, temp);
-                            this.per_iot.get(rqster).add(temp2);
+//                            this.per_iot.get(rqster).add(temp2);
+                            System.out.println(rqster + ": " + this.per_iot.get(rqster));
+                            test_list.add(this.per_iot.get(rqster));
                         }
                     }
                 }
@@ -88,9 +94,33 @@ public class Search_Json {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-        System.out.println(per_iot);
+        System.out.println("test_list : " + test_list.get(0));
+//        System.out.println("test_list[0][0]: "+test_list.get(0).get(0).toString().replace("[", "").replace("]", ""));
+        List<String> myList = new ArrayList<String>();
+        JSONObject result_json = new JSONObject();
+        for (int i = 0 ; i < test_list.size() ; i ++){
+            myList = Arrays.
+                    asList(test_list.get(i).get(0).toString().
+                            replace("[", "").
+                            replace("]", "").
+                            split(","));
+//            if (result_json.get(myList.get(0)).toString().equals("{}")){
+//                result_json.put(myList.get(0), myList.get(1) + myList.get(2));
+//            } else {
+//                result_json.put(myList.get(0), String.valueOf(result_json.get(myList.get(0))) + myList.get(1) + myList.get(2));
+//            }
+            result_json.put(myList.get(0), String.valueOf(result_json.get(myList.get(0))) + myList.get(1) + myList.get(2));
+        }
+        for (int j = 0 ; j < result_json.size() ; j ++){
+
+        }
+        System.out.println("---------------------------------");
+        finallist = Arrays.asList(result_json.get("iottest55").toString().split(" "));
+        finallist.remove(0);
+        System.out.println("---------------------------------");
         return per_iot;
     }
+
     public String Get_Account_names(String input){
         try {
             JSONParser jsonParser = new JSONParser();
