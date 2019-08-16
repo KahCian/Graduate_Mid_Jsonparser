@@ -15,6 +15,8 @@ public class SubstringTest {
         Search_Json sj = new Search_Json();
         result = sj.Lookup_device_detail(input);
         System.out.println(result);
+        System.out.println(result.keySet());
+        System.out.println(result.get("iottest44"));
 //        System.out.println("-------------------------------------------------");
 //        System.out.println(result.keySet()); // key value of result HashMap
 //        System.out.println(result); // result

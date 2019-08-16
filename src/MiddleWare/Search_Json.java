@@ -136,13 +136,20 @@ public class Search_Json {
         System.out.println("---------------------------------");
         System.out.println(temp_device);
         System.out.println(result_Hash.keySet());
-//        for (int m = 0 ; m < result_Hash.size() ; m ++){ // 등록된 device 갯수만큼
-//            for (int n = 1 ; n < result_Hash.get(temp_device.get(m)).size() ; n ++){ // 등록된 device의 list size만큼 / n = 1 // null 제거
-//                result_Hash_Hash.get(temp_device.get(m)).remove(0);
-//            }
+        for (int m = 0 ; m < result_Hash.size() ; m ++){ // 등록된 device 갯수만큼
+            List<Object> tmp = new ArrayList<>();
+            for (int n = 1 ; n < result_Hash.get(temp_device.get(m)).size() ; n ++){ // 등록된 device의 list size만큼 / n = 1 // null 제거
+                tmp.add(result_Hash.get(temp_device.get(m)).get(n));
+            }
+            result_Hash_Hash.put(temp_device.get(m), tmp);
 //            result_Hash_Hash.get(temp_device.get(m)).remove(0);
-//        }
-        return result_Hash;
+        }
+        System.out.println("==================================");
+        System.out.println(result_Hash.get(temp_device.get(0)).get(0));
+        System.out.println("----------------------------------");
+        System.out.println(per_iot);
+        System.out.println("----------------------------------");
+        return result_Hash_Hash;
     }
 
     // ====================================================================================================
