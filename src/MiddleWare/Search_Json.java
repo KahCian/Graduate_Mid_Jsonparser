@@ -4,6 +4,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
+import java.lang.reflect.Array;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -17,6 +18,8 @@ public class Search_Json {
     List<String> finallist = new ArrayList<>();
     HashMap<String, List<List>> per_iot = new HashMap<String, List<List>>();
     HashMap<String, List<String>> real_result = new HashMap<String, List<String>>();
+    HashMap<Object, List> result_Hash = new HashMap<Object, List>();
+
 
 
     public List Parsing_Response(String input, String which){
@@ -111,12 +114,369 @@ public class Search_Json {
 //            }
             result_json.put(myList.get(0), String.valueOf(result_json.get(myList.get(0))) + myList.get(1) + myList.get(2));
         }
-        for (int j = 0 ; j < result_json.size() ; j ++){
+        List temp_device = new List() {
+            @Override
+            public int size() {
+                return 0;
+            }
 
-        }
+            @Override
+            public boolean isEmpty() {
+                return false;
+            }
+
+            @Override
+            public boolean contains(Object o) {
+                return false;
+            }
+
+            @Override
+            public Iterator iterator() {
+                return null;
+            }
+
+            @Override
+            public Object[] toArray() {
+                return new Object[0];
+            }
+
+            @Override
+            public Object[] toArray(Object[] a) {
+                return new Object[0];
+            }
+
+            @Override
+            public boolean add(Object o) {
+                return false;
+            }
+
+            @Override
+            public boolean remove(Object o) {
+                return false;
+            }
+
+            @Override
+            public boolean containsAll(Collection c) {
+                return false;
+            }
+
+            @Override
+            public boolean addAll(Collection c) {
+                return false;
+            }
+
+            @Override
+            public boolean addAll(int index, Collection c) {
+                return false;
+            }
+
+            @Override
+            public boolean removeAll(Collection c) {
+                return false;
+            }
+
+            @Override
+            public boolean retainAll(Collection c) {
+                return false;
+            }
+
+            @Override
+            public void clear() {
+
+            }
+
+            @Override
+            public Object get(int index) {
+                return null;
+            }
+
+            @Override
+            public Object set(int index, Object element) {
+                return null;
+            }
+
+            @Override
+            public void add(int index, Object element) {
+
+            }
+
+            @Override
+            public Object remove(int index) {
+                return null;
+            }
+
+            @Override
+            public int indexOf(Object o) {
+                return 0;
+            }
+
+            @Override
+            public int lastIndexOf(Object o) {
+                return 0;
+            }
+
+            @Override
+            public ListIterator listIterator() {
+                return null;
+            }
+
+            @Override
+            public ListIterator listIterator(int index) {
+                return null;
+            }
+
+            @Override
+            public List subList(int fromIndex, int toIndex) {
+                return null;
+            }
+        };
+        List temp_data = new List() {
+            @Override
+            public int size() {
+                return 0;
+            }
+
+            @Override
+            public boolean isEmpty() {
+                return false;
+            }
+
+            @Override
+            public boolean contains(Object o) {
+                return false;
+            }
+
+            @Override
+            public Iterator iterator() {
+                return null;
+            }
+
+            @Override
+            public Object[] toArray() {
+                return new Object[0];
+            }
+
+            @Override
+            public Object[] toArray(Object[] a) {
+                return new Object[0];
+            }
+
+            @Override
+            public boolean add(Object o) {
+                return false;
+            }
+
+            @Override
+            public boolean remove(Object o) {
+                return false;
+            }
+
+            @Override
+            public boolean containsAll(Collection c) {
+                return false;
+            }
+
+            @Override
+            public boolean addAll(Collection c) {
+                return false;
+            }
+
+            @Override
+            public boolean addAll(int index, Collection c) {
+                return false;
+            }
+
+            @Override
+            public boolean removeAll(Collection c) {
+                return false;
+            }
+
+            @Override
+            public boolean retainAll(Collection c) {
+                return false;
+            }
+
+            @Override
+            public void clear() {
+
+            }
+
+            @Override
+            public Object get(int index) {
+                return null;
+            }
+
+            @Override
+            public Object set(int index, Object element) {
+                return null;
+            }
+
+            @Override
+            public void add(int index, Object element) {
+
+            }
+
+            @Override
+            public Object remove(int index) {
+                return null;
+            }
+
+            @Override
+            public int indexOf(Object o) {
+                return 0;
+            }
+
+            @Override
+            public int lastIndexOf(Object o) {
+                return 0;
+            }
+
+            @Override
+            public ListIterator listIterator() {
+                return null;
+            }
+
+            @Override
+            public ListIterator listIterator(int index) {
+                return null;
+            }
+
+            @Override
+            public List subList(int fromIndex, int toIndex) {
+                return null;
+            }
+        };
+//        temp = Arrays.asList(result_json.keySet().toString().split(","));
         System.out.println("---------------------------------");
-        finallist = Arrays.asList(result_json.get("iottest55").toString().split(" "));
-        finallist.remove(0);
+        temp_device = Arrays.asList(result_json.keySet().toString().replace("[", "").replace("]", "").split(","));
+
+        for (int i = 0 ; i < result_json.keySet().size() ; i ++){
+            List temptemp = new List() {
+                @Override
+                public int size() {
+                    return 0;
+                }
+
+                @Override
+                public boolean isEmpty() {
+                    return false;
+                }
+
+                @Override
+                public boolean contains(Object o) {
+                    return false;
+                }
+
+                @Override
+                public Iterator iterator() {
+                    return null;
+                }
+
+                @Override
+                public Object[] toArray() {
+                    return new Object[0];
+                }
+
+                @Override
+                public Object[] toArray(Object[] a) {
+                    return new Object[0];
+                }
+
+                @Override
+                public boolean add(Object o) {
+                    return false;
+                }
+
+                @Override
+                public boolean remove(Object o) {
+                    return false;
+                }
+
+                @Override
+                public boolean containsAll(Collection c) {
+                    return false;
+                }
+
+                @Override
+                public boolean addAll(Collection c) {
+                    return false;
+                }
+
+                @Override
+                public boolean addAll(int index, Collection c) {
+                    return false;
+                }
+
+                @Override
+                public boolean removeAll(Collection c) {
+                    return false;
+                }
+
+                @Override
+                public boolean retainAll(Collection c) {
+                    return false;
+                }
+
+                @Override
+                public void clear() {
+
+                }
+
+                @Override
+                public Object get(int index) {
+                    return null;
+                }
+
+                @Override
+                public Object set(int index, Object element) {
+                    return null;
+                }
+
+                @Override
+                public void add(int index, Object element) {
+
+                }
+
+                @Override
+                public Object remove(int index) {
+                    return null;
+                }
+
+                @Override
+                public int indexOf(Object o) {
+                    return 0;
+                }
+
+                @Override
+                public int lastIndexOf(Object o) {
+                    return 0;
+                }
+
+                @Override
+                public ListIterator listIterator() {
+                    return null;
+                }
+
+                @Override
+                public ListIterator listIterator(int index) {
+                    return null;
+                }
+
+                @Override
+                public List subList(int fromIndex, int toIndex) {
+                    return null;
+                }
+            };
+            Object name = new Object();
+//            temp_data = Arrays.asList(result_json.get(temp_device.get(i)).toString().replace("[", "").replace("]", "").split(" "));
+//            for (int j = 1 ; j < temp_data.size() ; j ++) {
+//                temptemp.add(temp_data.get(j));
+//            }
+//            result_Hash.put(temp_device.get(i), temp_data);
+        }
+        System.out.println(result_Hash);
+        System.out.println(temp_device.get(1).toString().length()); // temp_device[0] 을 제외한 값들 앞에 공백 " "인것 제거
+        System.out.println(Arrays.asList(result_json.get(temp_device.get(0)).toString().replace("[","").replace("]","").split(" ")));//.toString().replace("[", "").replace("]", ""))));
         System.out.println("---------------------------------");
         return per_iot;
     }
