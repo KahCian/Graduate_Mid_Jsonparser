@@ -9,11 +9,12 @@ import java.util.List;
 
 public class SubstringTest {
     public static void main(String[] args) throws IOException {
-        HashMap<String, List<List>> result = new HashMap<String, List<List>>();
-        String input =  new String(Files.readAllBytes(Paths.get("C:\\Users\\gluec\\Desktop\\190809\\gr_md\\src\\MiddleWare\\test.txt")));
+        HashMap<Object, List> result = new HashMap<Object, List>();
+        String input =  new String(Files.readAllBytes(Paths.get("C:\\Users\\USER\\IdeaProjects\\MiddleWare\\src\\MiddleWare\\test.txt")));
         String request = "pushdata";
         Search_Json sj = new Search_Json();
         result = sj.Lookup_device_detail(input);
+        System.out.println(result);
 //        System.out.println("-------------------------------------------------");
 //        System.out.println(result.keySet()); // key value of result HashMap
 //        System.out.println(result); // result

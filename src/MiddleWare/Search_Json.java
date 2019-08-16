@@ -4,6 +4,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
+import java.lang.reflect.Array;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -17,6 +18,9 @@ public class Search_Json {
     List<String> finallist = new ArrayList<>();
     HashMap<String, List<List>> per_iot = new HashMap<String, List<List>>();
     HashMap<String, List<String>> real_result = new HashMap<String, List<String>>();
+    HashMap<Object, List> result_Hash = new HashMap<Object, List>();
+    HashMap<Object, List> result_Hash_Hash = new HashMap<Object, List>();
+
 
 
     public List Parsing_Response(String input, String which){
@@ -51,7 +55,7 @@ public class Search_Json {
         return result_list;
     }
 
-    public HashMap<String, List<List>> Lookup_device_detail(String input){
+    public HashMap<Object, List> Lookup_device_detail(String input){
         try {
             JSONParser jsonParser = new JSONParser();
             JSONObject jsonObj = (JSONObject) jsonParser.parse(input);
@@ -109,17 +113,39 @@ public class Search_Json {
 //            } else {
 //                result_json.put(myList.get(0), String.valueOf(result_json.get(myList.get(0))) + myList.get(1) + myList.get(2));
 //            }
-            result_json.put(myList.get(0), String.valueOf(result_json.get(myList.get(0))) + myList.get(1) + myList.get(2));
+            result_json.put(myList.get(0),(result_json.get(myList.get(0)))+myList.get(1)+myList.get(2));
         }
-        for (int j = 0 ; j < result_json.size() ; j ++){
-
+        List<String> new_temp_device = new ArrayList<>();
+        List<String> temp = new ArrayList<>();
+        List<String> temp_data = new ArrayList<>();
+        temp = Arrays.asList(result_json.keySet().toString().split(","));
+        System.out.println("---------------------------------");
+        new_temp_device = Arrays.asList(result_json.keySet().toString().replace("[", "").replace("]", "").split(","));
+        new_temp_device.stream().map(s -> s.replaceAll("\\s", "")).forEach(System.out::println);
+        List<String> temp_device = new_temp_device.stream().map(s->s.replaceAll("\\s", "")).collect(Collectors.toList());
+        for (int i = 0 ; i < result_json.keySet().size() ; i ++){
+            List<String> temptemp = new ArrayList<>();
+            Object name = new Object();
+            temp_data = Arrays.asList(result_json.get(temp_device.get(i)).toString().replace("[", "").replace("]", "").split(" "));
+            for (int j = 1 ; j < temp_data.size() ; j ++) {
+                temptemp.add(temp_data.get(j));
+            }
+            result_Hash.put(temp_device.get(i), temp_data);
         }
+        System.out.println("result_Hash");
         System.out.println("---------------------------------");
-        finallist = Arrays.asList(result_json.get("iottest55").toString().split(" "));
-        finallist.remove(0);
-        System.out.println("---------------------------------");
-        return per_iot;
+        System.out.println(temp_device);
+        System.out.println(result_Hash.keySet());
+//        for (int m = 0 ; m < result_Hash.size() ; m ++){ // 등록된 device 갯수만큼
+//            for (int n = 1 ; n < result_Hash.get(temp_device.get(m)).size() ; n ++){ // 등록된 device의 list size만큼 / n = 1 // null 제거
+//                result_Hash_Hash.get(temp_device.get(m)).remove(0);
+//            }
+//            result_Hash_Hash.get(temp_device.get(m)).remove(0);
+//        }
+        return result_Hash;
     }
+
+    // ====================================================================================================
 
     public String Get_Account_names(String input){
         try {
