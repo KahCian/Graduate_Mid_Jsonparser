@@ -10,19 +10,50 @@ import java.util.stream.Collectors;
 
 public class Search_Json {
     String result;
-    List<String> result_list = new ArrayList<>();
-    List<String> rqster_list = new ArrayList<>();
-    List<String> device_footprint = new ArrayList<>();
-    List<String> act_iot = new ArrayList<>();
-    List<List> test_list = new ArrayList<>();
-    List<String> finallist = new ArrayList<>();
+    List<String> result_list = new ArrayList<String>();
+    List<String> removedevice_list = new ArrayList<String>();
+    List<String> rqster_list = new ArrayList<String>();
+    List<String> device_footprint = new ArrayList<String>();
+    List<String> act_iot = new ArrayList<String>();
+    List<List> test_list = new ArrayList<List>();
+    List<String> finallist = new ArrayList<String>();
     HashMap<String, List<List>> per_iot = new HashMap<String, List<List>>();
     HashMap<String, List<String>> real_result = new HashMap<String, List<String>>();
     HashMap<Object, List> result_Hash = new HashMap<Object, List>();
     HashMap<Object, List> result_Hash_Hash = new HashMap<Object, List>();
 
 
-
+    public List Recent_User(String input, String which) {
+        try {
+            JSONParser jsonParser = new JSONParser();
+            JSONObject jsonObj = (JSONObject) jsonParser.parse(input);
+            JSONArray actions = (JSONArray) jsonObj.get("actions");
+            for (int i = 0; i < actions.size(); i++) {
+                JSONObject first = (JSONObject) actions.get(i);
+                JSONObject action_trace = (JSONObject) first.get("action_trace");
+                JSONObject act = (JSONObject) action_trace.get("act");
+                String name = String.valueOf(act.get("name"));
+                JSONObject data = (JSONObject) act.get("data");
+                if (which.equals("recentuser")) {
+                    if (name.equals("removedevice")) {
+                        String removedevice = (String) data.get("dvice");
+                        this.removedevice_list.add(removedevice);
+                    }
+                }
+            }
+            List<String> adddevice_list = new ArrayList<String>();
+            adddevice_list = Parsing_Response(input, "attachdevice");
+            HashSet<String> distinctData1 = new HashSet<String>(removedevice_list);
+            removedevice_list = new ArrayList<String>(distinctData1);
+            HashSet<String> distinctData2 = new HashSet<String>(adddevice_list);
+            adddevice_list = new ArrayList<String>(distinctData2);
+            adddevice_list.removeAll(removedevice_list);
+            result_list = adddevice_list;
+        } catch (Exception e){
+            System.out.println(e);
+        }
+        return result_list;
+    }
     public List Parsing_Response(String input, String which){
         try {
             JSONParser jsonParser = new JSONParser();
@@ -37,7 +68,7 @@ public class Search_Json {
                 String rqster = String.valueOf(data.get("rqster"));
                 if (name.equals("attachdevice") && which.equals("attachdevice")) {
                     String dvice = String.valueOf(data.get("dvice"));
-                    this.result_list.add("attachdevice: " + dvice);
+                    this.result_list.add(dvice);
                 } else if (name.equals("pushdata") && which.equals("pushdata")) {
                     String targetdevice = String.valueOf(data.get("targetdevice"));
                     String push_data = String.valueOf(data.get("data"));

@@ -2,11 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="170fb5cf-5c99-4c98-972d-7e3d11f695f8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MiddleWare/MiddleWare/Search_Json.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MiddleWare/MiddleWare/Search_Json.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MiddleWare/MiddleWare/SubstringTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MiddleWare/MiddleWare/SubstringTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MiddleWare/Search_Json.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MiddleWare/Search_Json.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MiddleWare/SubstringTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MiddleWare/SubstringTest.java" afterDir="false" />
     </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,14 +23,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/MiddleWare/Search_Json.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="143" column="41" selection-end-line="225" selection-end-column="1" />
+            <state relative-caret-position="429">
+              <caret line="50" selection-start-line="50" selection-end-line="50" />
               <folding>
-                <element signature="e#661#681#0" expanded="true" />
-                <element signature="e#744#766#0" expanded="true" />
-                <element signature="e#821#835#0" expanded="true" />
-                <element signature="e#890#904#0" expanded="true" />
-                <element signature="e#5253#5261#0" expanded="true" />
+                <element signature="e#2165#2173#0" expanded="true" />
+                <element signature="e#2368#2376#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -36,16 +36,18 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MiddleWare/SubstringTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="23" column="40" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
-              <folding>
-                <element signature="e#331#345#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="363">
+              <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>List</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -54,16 +56,16 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
-        <option value="$PROJECT_DIR$/src/MiddleWare/Search_Json.java" />
         <option value="$PROJECT_DIR$/src/MiddleWare/SubstringTest.java" />
+        <option value="$PROJECT_DIR$/src/MiddleWare/Search_Json.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1736" />
-    <option name="height" value="1416" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-2166" />
+    <option name="y" value="-1187" />
+    <option name="width" value="2604" />
+    <option name="height" value="2124" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -71,22 +73,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="MiddleWare" type="58d84e3e:PackageViewProjectNode" />
-              <item name="MiddleWare" type="616d4139:PackageViewModuleNode" />
-            </path>
-            <path>
-              <item name="MiddleWare" type="58d84e3e:PackageViewProjectNode" />
-              <item name="MiddleWare" type="616d4139:PackageViewModuleNode" />
-              <item name="MiddleWare" type="1f31426a:PackageElementNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -104,11 +90,27 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="MiddleWare" type="58d84e3e:PackageViewProjectNode" />
+              <item name="MiddleWare" type="616d4139:PackageViewModuleNode" />
+            </path>
+            <path>
+              <item name="MiddleWare" type="58d84e3e:PackageViewProjectNode" />
+              <item name="MiddleWare" type="616d4139:PackageViewModuleNode" />
+              <item name="MiddleWare" type="1f31426a:PackageElementNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -146,13 +148,20 @@
     <configuration />
   </component>
   <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="170fb5cf-5c99-4c98-972d-7e3d11f695f8" name="Default Changelist" comment="" />
+      <created>1566371907667</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1566371907667</updated>
+    </task>
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1736" height="1416" extended-state="0" />
+    <frame x="-2167" y="-1170" width="1455" height="2535" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21300717" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.05519713" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -161,7 +170,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3377535" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3376353" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -169,7 +178,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.24492979" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32917318" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.2618651" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -180,7 +189,7 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16776316" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.05519713" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -189,15 +198,15 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.52710134" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3376353" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32967034" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.24492979" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.3299293" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.2618651" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -225,27 +234,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MiddleWare/SubstringTest.java">
+    <entry file="file://$PROJECT_DIR$/src/MiddleWare/Search_Json.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="23" column="40" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
+        <state relative-caret-position="429">
+          <caret line="50" selection-start-line="50" selection-end-line="50" />
           <folding>
-            <element signature="e#331#345#0" expanded="true" />
+            <element signature="e#2165#2173#0" expanded="true" />
+            <element signature="e#2368#2376#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MiddleWare/Search_Json.java">
+    <entry file="file://$PROJECT_DIR$/src/MiddleWare/SubstringTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="143" column="41" selection-end-line="225" selection-end-column="1" />
-          <folding>
-            <element signature="e#661#681#0" expanded="true" />
-            <element signature="e#744#766#0" expanded="true" />
-            <element signature="e#821#835#0" expanded="true" />
-            <element signature="e#890#904#0" expanded="true" />
-            <element signature="e#5253#5261#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="363">
+          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
         </state>
       </provider>
     </entry>
