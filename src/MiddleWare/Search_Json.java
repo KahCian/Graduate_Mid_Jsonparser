@@ -19,6 +19,7 @@ public class Search_Json {
     HashMap<String, List<List>> per_iot = new HashMap<String, List<List>>();
     HashMap<String, List<String>> real_result = new HashMap<String, List<String>>();
     HashMap<Object, List> result_Hash = new HashMap<Object, List>();
+    HashMap<Object, List> result_Hash_Hash = new HashMap<Object, List>();
 
 
 
@@ -54,7 +55,7 @@ public class Search_Json {
         return result_list;
     }
 
-    public HashMap<String, List<List>> Lookup_device_detail(String input){
+    public HashMap<Object, List> Lookup_device_detail(String input){
         try {
             JSONParser jsonParser = new JSONParser();
             JSONObject jsonObj = (JSONObject) jsonParser.parse(input);
@@ -112,374 +113,46 @@ public class Search_Json {
 //            } else {
 //                result_json.put(myList.get(0), String.valueOf(result_json.get(myList.get(0))) + myList.get(1) + myList.get(2));
 //            }
-            result_json.put(myList.get(0), String.valueOf(result_json.get(myList.get(0))) + myList.get(1) + myList.get(2));
+            result_json.put(myList.get(0),(result_json.get(myList.get(0)))+myList.get(1)+myList.get(2));
         }
-        List temp_device = new List() {
-            @Override
-            public int size() {
-                return 0;
-            }
-
-            @Override
-            public boolean isEmpty() {
-                return false;
-            }
-
-            @Override
-            public boolean contains(Object o) {
-                return false;
-            }
-
-            @Override
-            public Iterator iterator() {
-                return null;
-            }
-
-            @Override
-            public Object[] toArray() {
-                return new Object[0];
-            }
-
-            @Override
-            public Object[] toArray(Object[] a) {
-                return new Object[0];
-            }
-
-            @Override
-            public boolean add(Object o) {
-                return false;
-            }
-
-            @Override
-            public boolean remove(Object o) {
-                return false;
-            }
-
-            @Override
-            public boolean containsAll(Collection c) {
-                return false;
-            }
-
-            @Override
-            public boolean addAll(Collection c) {
-                return false;
-            }
-
-            @Override
-            public boolean addAll(int index, Collection c) {
-                return false;
-            }
-
-            @Override
-            public boolean removeAll(Collection c) {
-                return false;
-            }
-
-            @Override
-            public boolean retainAll(Collection c) {
-                return false;
-            }
-
-            @Override
-            public void clear() {
-
-            }
-
-            @Override
-            public Object get(int index) {
-                return null;
-            }
-
-            @Override
-            public Object set(int index, Object element) {
-                return null;
-            }
-
-            @Override
-            public void add(int index, Object element) {
-
-            }
-
-            @Override
-            public Object remove(int index) {
-                return null;
-            }
-
-            @Override
-            public int indexOf(Object o) {
-                return 0;
-            }
-
-            @Override
-            public int lastIndexOf(Object o) {
-                return 0;
-            }
-
-            @Override
-            public ListIterator listIterator() {
-                return null;
-            }
-
-            @Override
-            public ListIterator listIterator(int index) {
-                return null;
-            }
-
-            @Override
-            public List subList(int fromIndex, int toIndex) {
-                return null;
-            }
-        };
-        List temp_data = new List() {
-            @Override
-            public int size() {
-                return 0;
-            }
-
-            @Override
-            public boolean isEmpty() {
-                return false;
-            }
-
-            @Override
-            public boolean contains(Object o) {
-                return false;
-            }
-
-            @Override
-            public Iterator iterator() {
-                return null;
-            }
-
-            @Override
-            public Object[] toArray() {
-                return new Object[0];
-            }
-
-            @Override
-            public Object[] toArray(Object[] a) {
-                return new Object[0];
-            }
-
-            @Override
-            public boolean add(Object o) {
-                return false;
-            }
-
-            @Override
-            public boolean remove(Object o) {
-                return false;
-            }
-
-            @Override
-            public boolean containsAll(Collection c) {
-                return false;
-            }
-
-            @Override
-            public boolean addAll(Collection c) {
-                return false;
-            }
-
-            @Override
-            public boolean addAll(int index, Collection c) {
-                return false;
-            }
-
-            @Override
-            public boolean removeAll(Collection c) {
-                return false;
-            }
-
-            @Override
-            public boolean retainAll(Collection c) {
-                return false;
-            }
-
-            @Override
-            public void clear() {
-
-            }
-
-            @Override
-            public Object get(int index) {
-                return null;
-            }
-
-            @Override
-            public Object set(int index, Object element) {
-                return null;
-            }
-
-            @Override
-            public void add(int index, Object element) {
-
-            }
-
-            @Override
-            public Object remove(int index) {
-                return null;
-            }
-
-            @Override
-            public int indexOf(Object o) {
-                return 0;
-            }
-
-            @Override
-            public int lastIndexOf(Object o) {
-                return 0;
-            }
-
-            @Override
-            public ListIterator listIterator() {
-                return null;
-            }
-
-            @Override
-            public ListIterator listIterator(int index) {
-                return null;
-            }
-
-            @Override
-            public List subList(int fromIndex, int toIndex) {
-                return null;
-            }
-        };
-//        temp = Arrays.asList(result_json.keySet().toString().split(","));
+        List<String> new_temp_device = new ArrayList<>();
+        List<String> temp = new ArrayList<>();
+        List<String> temp_data = new ArrayList<>();
+        temp = Arrays.asList(result_json.keySet().toString().split(","));
         System.out.println("---------------------------------");
-        temp_device = Arrays.asList(result_json.keySet().toString().replace("[", "").replace("]", "").split(","));
-
+        new_temp_device = Arrays.asList(result_json.keySet().toString().replace("[", "").replace("]", "").split(","));
+        new_temp_device.stream().map(s -> s.replaceAll("\\s", "")).forEach(System.out::println);
+        List<String> temp_device = new_temp_device.stream().map(s->s.replaceAll("\\s", "")).collect(Collectors.toList());
         for (int i = 0 ; i < result_json.keySet().size() ; i ++){
-            List temptemp = new List() {
-                @Override
-                public int size() {
-                    return 0;
-                }
-
-                @Override
-                public boolean isEmpty() {
-                    return false;
-                }
-
-                @Override
-                public boolean contains(Object o) {
-                    return false;
-                }
-
-                @Override
-                public Iterator iterator() {
-                    return null;
-                }
-
-                @Override
-                public Object[] toArray() {
-                    return new Object[0];
-                }
-
-                @Override
-                public Object[] toArray(Object[] a) {
-                    return new Object[0];
-                }
-
-                @Override
-                public boolean add(Object o) {
-                    return false;
-                }
-
-                @Override
-                public boolean remove(Object o) {
-                    return false;
-                }
-
-                @Override
-                public boolean containsAll(Collection c) {
-                    return false;
-                }
-
-                @Override
-                public boolean addAll(Collection c) {
-                    return false;
-                }
-
-                @Override
-                public boolean addAll(int index, Collection c) {
-                    return false;
-                }
-
-                @Override
-                public boolean removeAll(Collection c) {
-                    return false;
-                }
-
-                @Override
-                public boolean retainAll(Collection c) {
-                    return false;
-                }
-
-                @Override
-                public void clear() {
-
-                }
-
-                @Override
-                public Object get(int index) {
-                    return null;
-                }
-
-                @Override
-                public Object set(int index, Object element) {
-                    return null;
-                }
-
-                @Override
-                public void add(int index, Object element) {
-
-                }
-
-                @Override
-                public Object remove(int index) {
-                    return null;
-                }
-
-                @Override
-                public int indexOf(Object o) {
-                    return 0;
-                }
-
-                @Override
-                public int lastIndexOf(Object o) {
-                    return 0;
-                }
-
-                @Override
-                public ListIterator listIterator() {
-                    return null;
-                }
-
-                @Override
-                public ListIterator listIterator(int index) {
-                    return null;
-                }
-
-                @Override
-                public List subList(int fromIndex, int toIndex) {
-                    return null;
-                }
-            };
+            List<String> temptemp = new ArrayList<>();
             Object name = new Object();
-//            temp_data = Arrays.asList(result_json.get(temp_device.get(i)).toString().replace("[", "").replace("]", "").split(" "));
-//            for (int j = 1 ; j < temp_data.size() ; j ++) {
-//                temptemp.add(temp_data.get(j));
-//            }
-//            result_Hash.put(temp_device.get(i), temp_data);
+            temp_data = Arrays.asList(result_json.get(temp_device.get(i)).toString().replace("[", "").replace("]", "").split(" "));
+            for (int j = 1 ; j < temp_data.size() ; j ++) {
+                temptemp.add(temp_data.get(j));
+            }
+            result_Hash.put(temp_device.get(i), temp_data);
         }
-        System.out.println(result_Hash);
-        System.out.println(temp_device.get(1).toString().length()); // temp_device[0] 을 제외한 값들 앞에 공백 " "인것 제거
-        System.out.println(Arrays.asList(result_json.get(temp_device.get(0)).toString().replace("[","").replace("]","").split(" ")));//.toString().replace("[", "").replace("]", ""))));
+        System.out.println("result_Hash");
         System.out.println("---------------------------------");
-        return per_iot;
+        System.out.println(temp_device);
+        System.out.println(result_Hash.keySet());
+        for (int m = 0 ; m < result_Hash.size() ; m ++){ // 등록된 device 갯수만큼
+            List<Object> tmp = new ArrayList<>();
+            for (int n = 1 ; n < result_Hash.get(temp_device.get(m)).size() ; n ++){ // 등록된 device의 list size만큼 / n = 1 // null 제거
+                tmp.add(result_Hash.get(temp_device.get(m)).get(n));
+            }
+            result_Hash_Hash.put(temp_device.get(m), tmp);
+//            result_Hash_Hash.get(temp_device.get(m)).remove(0);
+        }
+        System.out.println("==================================");
+        System.out.println(result_Hash.get(temp_device.get(0)).get(0));
+        System.out.println("----------------------------------");
+        System.out.println(per_iot);
+        System.out.println("----------------------------------");
+        return result_Hash_Hash;
     }
+
+    // ====================================================================================================
 
     public String Get_Account_names(String input){
         try {
