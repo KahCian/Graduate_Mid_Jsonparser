@@ -14,6 +14,8 @@
       <change beforePath="$PROJECT_DIR$/src/MiddleWare/Search_Json.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MiddleWare/Search_Json.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MiddleWare/SubstringTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MiddleWare/SubstringTest.java" afterDir="false" />
     </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,7 +50,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MiddleWare/SubstringTest.java">
+        <entry file="file://$PROJECT_DIR$/src/MiddleWare/Yeelight_Launcher.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="300">
               <caret line="12" column="122" selection-start-line="12" selection-start-column="122" selection-end-line="12" selection-end-column="122" />
@@ -56,6 +58,15 @@
                 <element signature="imports" expanded="true" />
                 <marker date="1566048661309" expanded="true" signature="1242:1530" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MiddleWare/SubstringTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="297">
+              <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -98,7 +109,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane">
+      <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
@@ -115,17 +126,17 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="ProjectPane">
+      <pane id="PackagesPane">
         <subPane>
           <expand>
             <path>
-              <item name="MiddleWare" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MiddleWare" type="462c0819:PsiDirectoryNode" />
+              <item name="MiddleWare" type="58d84e3e:PackageViewProjectNode" />
+              <item name="MiddleWare" type="616d4139:PackageViewModuleNode" />
             </path>
             <path>
-              <item name="MiddleWare" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MiddleWare" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+              <item name="MiddleWare" type="58d84e3e:PackageViewProjectNode" />
+              <item name="MiddleWare" type="616d4139:PackageViewModuleNode" />
+              <item name="MiddleWare" type="1f31426a:PackageElementNode" />
             </path>
           </expand>
           <select />
