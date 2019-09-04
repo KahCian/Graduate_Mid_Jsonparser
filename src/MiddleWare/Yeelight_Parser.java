@@ -9,11 +9,11 @@ public class Yeelight_Parser {
     String falut = "wrong date";
     String result;
     public String parser(JSONObject input){
-        if (input.get("method") == "set_bright"){
+        if (input.get("method").equals("set_bright")){
             return bright_parser(input);
-        } else if (input.get("method") == "set_ct_abx"){
+        } else if (input.get("method").equals("set_ct_abx")){
             return ct_parser(input);
-        } else if (input.get("method") == "set_hsv"){
+        } else if (input.get("method").equals("set_hsv")){
             return hsv_parser(input);
         } else{
             return falut;
@@ -22,20 +22,19 @@ public class Yeelight_Parser {
     public String bright_parser(JSONObject input){
         List param = new ArrayList<>();
         param = (List) input.get("params");
-        result = "밝기 : " + param.get(0).toString() + "변경";
+        result = "밝기 : " + param.get(0).toString() + "% 변경";
         return result;
     }
     public String ct_parser(JSONObject input){
         List param = new ArrayList<>();
         param = (List) input.get("params");
-        result = "색온도 : " + param.get(0).toString() + "변경";
+        result = "색온도 : " + param.get(0).toString() + " 변경";
         return result;
     }
     public String hsv_parser(JSONObject input){
         List param = new ArrayList<>();
         param = (List) input.get("params");
-        String asd = (String) param.get(0);
-        int value = Integer.parseInt(asd);
+        java.lang.Long value = (Long) param.get(0);
         if (value <= 6) {
             result = "색상 : 빨강색으로 변경";
         } else if (7 <= (value) && (value) <= 32 ) {
