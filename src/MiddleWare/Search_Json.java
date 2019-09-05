@@ -23,7 +23,7 @@ public class Search_Json {
     HashMap<Object, List> result_Hash_Hash = new HashMap<Object, List>();
 
 
-    public List Recent_User(String input, String which) {
+    public List Recent_user_device(String input, String which) {
         List<String> device_list = new ArrayList<String>();
         List<String> user_list = new ArrayList<String>();
         try {

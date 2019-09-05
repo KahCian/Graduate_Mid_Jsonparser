@@ -15,7 +15,7 @@ public class SubstringTest {
         String input =  new String(Files.readAllBytes(Paths.get("C:\\Users\\USER\\IdeaProjects\\MiddleWare\\src\\MiddleWare\\test.txt")));
         String request = "pushdata";
         Search_Json sj = new Search_Json();
-        result_list = sj.Recent_User(input, "recentdevice");
+        result_list = sj.Recent_user_device(input, "recentuser");
         System.out.println(result_list);
 //        System.out.println("-------------------------------------------------");
 //        System.out.println(result.keySet()); // key value of result HashMap
