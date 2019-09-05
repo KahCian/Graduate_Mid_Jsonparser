@@ -24,6 +24,8 @@ public class Search_Json {
 
 
     public List Recent_User(String input, String which) {
+        List<String> device_list = new ArrayList<String>();
+        List<String> user_list = new ArrayList<String>();
         try {
             JSONParser jsonParser = new JSONParser();
             JSONObject jsonObj = (JSONObject) jsonParser.parse(input);
@@ -35,25 +37,40 @@ public class Search_Json {
                 String name = String.valueOf(act.get("name"));
                 JSONObject data = (JSONObject) act.get("data");
                 if (which.equals("recentuser")) {
-                    if (name.equals("removedevice")) {
-                        String removedevice = (String) data.get("dvice");
-                        this.removedevice_list.add(removedevice);
+                    if (name.equals("adduser")) {
+                        String wantuser = (String) data.get("wantuser");
+                        user_list.add(wantuser);
                     }
+                    else if (name.equals("removeuser")) {
+                        String user = (String) data.get("user");
+                        user_list.remove(user);
+                    }
+                    result_list = user_list;
+                } else if (which.equals("recentdevice")) {
+                    if (name.equals("attachdevice")) {
+                        String dvice = (String) data.get("dvice");
+                        device_list.add(dvice);
+                    } else if (name.equals("removedevice")) {
+                        String dvice = (String) data.get("dvice");
+                        device_list.remove(dvice);
+                    }
+                    result_list = device_list;
                 }
             }
-            List<String> adddevice_list = new ArrayList<String>();
-            adddevice_list = Parsing_Response(input, "attachdevice");
-            HashSet<String> distinctData1 = new HashSet<String>(removedevice_list);
-            removedevice_list = new ArrayList<String>(distinctData1);
-            HashSet<String> distinctData2 = new HashSet<String>(adddevice_list);
-            adddevice_list = new ArrayList<String>(distinctData2);
-            adddevice_list.removeAll(removedevice_list);
-            result_list = adddevice_list;
+//            List<String> adddevice_list = new ArrayList<String>();
+//            adddevice_list = Parsing_Response(input, "attachdevice");
+//            HashSet<String> distinctData1 = new HashSet<String>(removedevice_list);
+//            removedevice_list = new ArrayList<String>(distinctData1);
+//            HashSet<String> distinctData2 = new HashSet<String>(adddevice_list);
+//            adddevice_list = new ArrayList<String>(distinctData2);
+//            adddevice_list.removeAll(removedevice_list);
+//            result_list = adddevice_list;
         } catch (Exception e){
             System.out.println(e);
         }
         return result_list;
     }
+
     public List Parsing_Response(String input, String which){
         try {
             JSONParser jsonParser = new JSONParser();
