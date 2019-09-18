@@ -22,13 +22,13 @@ public class Yeelight_Parser {
     public String bright_parser(JSONObject input){
         List param = new ArrayList<>();
         param = (List) input.get("params");
-        result = "밝기 : " + param.get(0).toString() + "% 변경";
+        result = "Bright : " + param.get(0).toString() + "% changed";
         return result;
     }
     public String ct_parser(JSONObject input){
         List param = new ArrayList<>();
         param = (List) input.get("params");
-        result = "색온도 : " + param.get(0).toString() + " 변경";
+        result = "Color temperature : " + param.get(0).toString() + " changed";
         return result;
     }
     public String hsv_parser(JSONObject input){
@@ -36,25 +36,25 @@ public class Yeelight_Parser {
         param = (List) input.get("params");
         java.lang.Long value = (Long) param.get(0);
         if (value <= 6) {
-            result = "색상 : 빨강색으로 변경";
+            result = "Color : change Red";
         } else if (7 <= (value) && (value) <= 32 ) {
-            result = "색상 : 주황색으로 변경";
+            result = "Color : change Orange";
         } else if (33 <= value && value <= 56){
-            result = "색상 : 노랑색으로 변경";
+            result = "Color : change Yellow";
         } else if (57<= value && value <= 97) {
-            result = "색상 : 형광색으로 변경";
+            result = "Color : change Fluorescent";
         } else if (98 <= value && value <= 153) {
-            result = "색상 : 초록색으로 변경";
+            result = "Color : change Green";
         } else if (154 <= value && value <= 206) {
-            result = "색상 : 파란색으로 변경";
+            result = "Color : change Blue";
         } else if (207 <= value && value <= 260) {
-            result = "색상 : 보라색으로 변경";
+            result = "Color : change Indigo";
         } else if (261 <= value && value <= 285) {
-            result = "색상 : 보라색으로 변경";
+            result = "Color : change Purple";
         } else if (286 <= value && value <= 333) {
-            result = "색상 : 핑크색으로 변경";
+            result = "Color : change Pink";
         } else if (334 <=  value && value <= 360) {
-            result = "색상 : 자몽색으로 변경";
+            result = "Color : change Graoefruit";
         }
         return result;
     }
