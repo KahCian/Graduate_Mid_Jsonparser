@@ -10,9 +10,10 @@ public class Yeelight_Launcher {
         String bright_test = "{\"id\":77,\"method\":\"set_bright\",\"params\":[25, \"smooth\", 200]}";
         String ct_test = "{\"id\":78,\"method\":\"set_ct_abx\",\"params\":[4349, \"smooth\", 500]}";
         String hsv_test = "{\"id\":41,\"method\":\"set_hsv\",\"params\":[0, 100, \"smooth\", 200]}";
+        String on_off = "{\"id\":4,\"method\":\"set_power\",\"params\":[\"off\",\"smooth\",500]}";
 
         org.json.simple.parser.JSONParser jsonParser = new JSONParser();
-        JSONObject jsonObj = (JSONObject) jsonParser.parse(hsv_test);
+        JSONObject jsonObj = (JSONObject) jsonParser.parse(on_off);
         Yeelight_Parser test = new Yeelight_Parser();
         System.out.println(test.parser(jsonObj));
     }

@@ -15,6 +15,8 @@ public class Yeelight_Parser {
             return ct_parser(input);
         } else if (input.get("method").equals("set_hsv")){
             return hsv_parser(input);
+        } else if (input.get("method").equals("set_power")){
+            return set_power(input);
         } else{
             return falut;
         }
@@ -23,6 +25,12 @@ public class Yeelight_Parser {
         List param = new ArrayList<>();
         param = (List) input.get("params");
         result = "Bright : " + param.get(0).toString() + "% changed";
+        return result;
+    }
+    public String set_power(JSONObject input){
+        List param = new ArrayList<>();
+        param = (List) input.get("params");
+        result = "Device power " + param.get(0).toString();
         return result;
     }
     public String ct_parser(JSONObject input){
