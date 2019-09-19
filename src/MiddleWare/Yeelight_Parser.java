@@ -62,7 +62,7 @@ public class Yeelight_Parser {
         } else if (286 <= value && value <= 333) {
             result = "Color : change Pink";
         } else if (334 <=  value && value <= 360) {
-            result = "Color : change Graoefruit";
+            result = "Color : change Grapefruit";
         }
         return result;
     }
