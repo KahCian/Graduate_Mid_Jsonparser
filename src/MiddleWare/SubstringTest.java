@@ -12,10 +12,10 @@ public class SubstringTest {
         HashMap<Object, List> result = new HashMap<Object, List>();
         HashMap<String, List> result2 = new HashMap<String, List>();
         List<String> result_list = new ArrayList<>();
-        String input =  new String(Files.readAllBytes(Paths.get("C:\\Users\\USER\\IdeaProjects\\MiddleWare\\src\\MiddleWare\\test.txt")));
-        String request = "pushdata";
+        String input =  new String(Files.readAllBytes(Paths.get("C:\\Users\\USER\\IdeaProjects\\MiddleWare\\src\\MiddleWare\\test0922.txt")));
+        String request = "attachdevice";
         Search_Json sj = new Search_Json();
-        result_list = sj.Recent_user_device(input, "recentuser");
+        result_list = sj.Device_Ip_Port(input, "attachdevice");
         System.out.println(result_list);
 //        System.out.println("-------------------------------------------------");
 //        System.out.println(result.keySet()); // key value of result HashMap

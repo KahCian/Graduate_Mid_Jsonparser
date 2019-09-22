@@ -22,6 +22,33 @@ public class Search_Json {
     HashMap<Object, List> result_Hash = new HashMap<Object, List>();
     HashMap<Object, List> result_Hash_Hash = new HashMap<Object, List>();
 
+    public List Device_Ip_Port(String input, String which){
+        try {
+            JSONParser jsonParser = new JSONParser();
+            JSONObject jsonObj = (JSONObject) jsonParser.parse(input);
+            JSONArray actions = (JSONArray) jsonObj.get("actions");
+            for (int i = 0; i < actions.size(); i++) {
+                JSONObject first = (JSONObject) actions.get(i);
+                JSONObject action_trace = (JSONObject) first.get("action_trace");
+                JSONObject act = (JSONObject) action_trace.get("act");
+                String name = String.valueOf(act.get("name"));
+                JSONObject data = (JSONObject) act.get("data");
+                String rqster = String.valueOf(data.get("rqster"));
+                if (name.equals("attachdevice") && which.equals("attachdevice")) {
+                    String dvice = String.valueOf(data.get("dvice"));
+                    String iaddr = String.valueOf(data.get("iaddr"));
+                    String port = String.valueOf(data.get("port"));
+                    this.result_list.add(dvice);
+                    this.result_list.add(iaddr);
+                    this.result_list.add(port);
+                }
+            }
+        }catch (ParseException e){
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        return result_list;
+    }
 
     public List Recent_user_device(String input, String which) {
         List<String> device_list = new ArrayList<String>();
