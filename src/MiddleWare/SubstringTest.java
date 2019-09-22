@@ -15,7 +15,7 @@ public class SubstringTest {
         String input =  new String(Files.readAllBytes(Paths.get("C:\\Users\\USER\\IdeaProjects\\MiddleWare\\src\\MiddleWare\\test0922.txt")));
         String request = "attachdevice";
         Search_Json sj = new Search_Json();
-        result_list = sj.Device_Ip_Port(input, "attachdevice");
+        result_list = sj.Device_Ip_Port(input, "bslamp1");
         System.out.println(result_list);
 //        System.out.println("-------------------------------------------------");
 //        System.out.println(result.keySet()); // key value of result HashMap

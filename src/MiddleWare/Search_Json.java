@@ -32,13 +32,11 @@ public class Search_Json {
                 JSONObject action_trace = (JSONObject) first.get("action_trace");
                 JSONObject act = (JSONObject) action_trace.get("act");
                 String name = String.valueOf(act.get("name"));
-                String account = String.valueOf(act.get("account"));
                 JSONObject data = (JSONObject) act.get("data");
-                if (name.equals("attachdevice") && which.equals(account)) {
-                    String dvice = String.valueOf(data.get("dvice"));
+                String dvice = String.valueOf(data.get("dvice"));
+                if (name.equals("attachdevice") && dvice.equals(which)) {
                     String iaddr = String.valueOf(data.get("iaddr"));
                     String port = String.valueOf(data.get("port"));
-                    this.result_list.add(dvice);
                     this.result_list.add(iaddr);
                     this.result_list.add(port);
                 }
