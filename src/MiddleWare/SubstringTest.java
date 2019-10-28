@@ -11,11 +11,11 @@ public class SubstringTest {
     public static void main(String[] args) throws IOException {
         HashMap<Object, List> result = new HashMap<Object, List>();
         HashMap<String, List> result2 = new HashMap<String, List>();
-        List<String> result_list = new ArrayList<>();
-        String input =  new String(Files.readAllBytes(Paths.get("C:\\Users\\USER\\IdeaProjects\\MiddleWare\\src\\MiddleWare\\test0922.txt")));
+        HashMap<String, Integer> result_list = new HashMap<String, Integer>();
+        String input =  new String(Files.readAllBytes(Paths.get("C:\\Users\\USER\\IdeaProjects\\MiddleWare\\src\\MiddleWare\\데이터셋2.txt")));
         String request = "attachdevice";
         Search_Json sj = new Search_Json();
-        result_list = sj.Device_Ip_Port(input, "bslamp1");
+        result_list = sj.Lookup_History(input);
         System.out.println(result_list);
 //        System.out.println("-------------------------------------------------");
 //        System.out.println(result.keySet()); // key value of result HashMap

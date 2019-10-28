@@ -10,7 +10,7 @@
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../../바탕화면 3/19년도 1학기/졸프 미들웨어 코드/jsch-0.1.55.jar!/" />
+          <root url="jar://$USER_HOME$/바탕화면 3/19년도 1학기/졸프 미들웨어 코드/jsch-0.1.55.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -40,6 +40,15 @@
       <library>
         <CLASSES>
           <root url="jar://$USER_HOME$/Downloads/json-22.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/src/MiddleWare/jsch-0.1.55.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

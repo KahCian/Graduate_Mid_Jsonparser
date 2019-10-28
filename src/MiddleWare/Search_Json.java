@@ -296,4 +296,76 @@ public class Search_Json {
         }
         return result;
     }
+
+    public HashMap<String, Integer> Lookup_History(String input){
+        List<String> power_on = new ArrayList<String>();
+        List<String> power_off = new ArrayList<String>();
+        List<String> temp = new ArrayList<String>();
+        HashMap<String, Integer> RL = new HashMap();
+        try {
+            JSONParser jsonParser = new JSONParser();
+            JSONObject jsonObj = (JSONObject) jsonParser.parse(input);
+            JSONArray actions = (JSONArray) jsonObj.get("actions");
+            for (int i = 0; i < actions.size(); i++) {
+                JSONObject first = (JSONObject) actions.get(i);
+                String time = String.valueOf(first.get("block_time"));             // 시행 시간
+                RL.put(time.substring(0, 10), 0);
+                JSONObject action_trace = (JSONObject) first.get("action_trace");
+                JSONObject act = (JSONObject) action_trace.get("act");
+                String name = String.valueOf(act.get("name"));
+                JSONObject data = (JSONObject) act.get("data");
+                String rqster = String.valueOf(data.get("rqster"));
+                String targetdevice = String.valueOf(data.get("targetdevice"));
+                String OB = String.valueOf(data.get("data"));        // Device_power_IS_on / Device_power_IS_off
+                if (temp.size() < 2) {
+                    if (OB.equals("Device_power_IS_on")) {
+                        temp.add(time);
+                    }
+                    else if (OB.equals("Device_power_IS_off")){
+                        if (temp.size() == 0) {
+                            continue;
+                        }
+                        else {
+                            temp.add(time);
+                        }
+                    }
+                }
+                else {
+                    String On_day = temp.get(0).substring(0, 10);
+                    String Off_day = temp.get(1).substring(0, 10);
+                    String On_time = temp.get(0).substring(11);
+                    String Off_time = temp.get(1).substring(11);
+
+                    String On_day_day = On_day.substring(8);
+                    String Off_day_day = Off_day.substring(8);
+
+                    if (On_day_day.equals(Off_day_day)){
+                        int On_hour = Integer.parseInt(On_time.substring(0, 2));
+                        int Off_hour = Integer.parseInt(Off_time.substring(0, 2));
+
+                        int On_minute = Integer.parseInt(On_time.substring(3, 5));
+                        int Off_minute = Integer.parseInt(Off_time.substring(3, 5));
+
+                        int op_minute = ((Off_hour * 60) + Off_minute) - ((On_hour * 60) + On_minute);
+
+                        RL.put(On_day, RL.get(On_day)+op_minute);
+                    }
+                }
+//                if (OB.equals("Device_power_IS_on")) {         // 파워가 켜진 트랜잭션 실행 시간을 리스트에 저장
+//                    power_on.add(targetdevice);
+//                    power_on.add(time);
+//                    continue;
+//                }
+//                else if (OB.equals("Device_power_IS_off")) {   // 파워가 꺼진 트랜잭션 실행 시간을 리스트에 저장
+//                    power_off.add(targetdevice);
+//                    power_off.add(time);
+//                    continue;
+//                }
+            }
+        }catch (ParseException e){
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        return RL;
+    }
 }

@@ -8,12 +8,12 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Properties;
 
-public class  MW {
+public class  TesMW {
     String result;
 
     public static void main(String[] args) {
         MW mw = new MW();
-        String a = mw.MW("");
+        String a = mw.MW("touch /Users/DongHo/testssh/test1.txt\ntouch /Users/DongHo/testssh/test2.txt");
         System.out.println(a);
     }
 
@@ -37,7 +37,6 @@ public class  MW {
             ChannelExec channel = (ChannelExec) session.openChannel("exec");
             channel.setCommand(Command1);
             channel.setErrStream(System.err);
-
             InputStream in = channel.getInputStream();
             System.out.println(in);
             channel.connect();
