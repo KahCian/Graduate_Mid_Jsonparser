@@ -310,6 +310,10 @@ public class Search_Json {
                 JSONObject first = (JSONObject) actions.get(i);
                 String time = String.valueOf(first.get("block_time"));             // 시행 시간
                 RL.put(time.substring(0, 10), 0);
+            }
+            for (int i = 0; i < actions.size(); i++) {
+                JSONObject first = (JSONObject) actions.get(i);
+                String time = String.valueOf(first.get("block_time"));             // 시행 시간
                 JSONObject action_trace = (JSONObject) first.get("action_trace");
                 JSONObject act = (JSONObject) action_trace.get("act");
                 String name = String.valueOf(act.get("name"));
@@ -327,28 +331,29 @@ public class Search_Json {
                         }
                         else {
                             temp.add(time);
+                            String On_day = temp.get(0).substring(0, 10);
+                            String Off_day = temp.get(1).substring(0, 10);
+                            String On_time = temp.get(0).substring(11);
+                            String Off_time = temp.get(1).substring(11);
+
+                            String On_day_day = On_day.substring(8);
+                            String Off_day_day = Off_day.substring(8);
+
+                            if (On_day_day.equals(Off_day_day)){
+                                int On_hour = Integer.parseInt(On_time.substring(0, 2));
+                                int Off_hour = Integer.parseInt(Off_time.substring(0, 2));
+
+                                int On_minute = Integer.parseInt(On_time.substring(3, 5));
+                                int Off_minute = Integer.parseInt(Off_time.substring(3, 5));
+
+                                int op_minute = ((Off_hour * 60) + Off_minute) - ((On_hour * 60) + On_minute);
+
+                                RL.put(On_day, RL.get(On_day)+op_minute);
+                                temp.clear();
                         }
                     }
                 }
                 else {
-                    String On_day = temp.get(0).substring(0, 10);
-                    String Off_day = temp.get(1).substring(0, 10);
-                    String On_time = temp.get(0).substring(11);
-                    String Off_time = temp.get(1).substring(11);
-
-                    String On_day_day = On_day.substring(8);
-                    String Off_day_day = Off_day.substring(8);
-
-                    if (On_day_day.equals(Off_day_day)){
-                        int On_hour = Integer.parseInt(On_time.substring(0, 2));
-                        int Off_hour = Integer.parseInt(Off_time.substring(0, 2));
-
-                        int On_minute = Integer.parseInt(On_time.substring(3, 5));
-                        int Off_minute = Integer.parseInt(Off_time.substring(3, 5));
-
-                        int op_minute = ((Off_hour * 60) + Off_minute) - ((On_hour * 60) + On_minute);
-
-                        RL.put(On_day, RL.get(On_day)+op_minute);
                     }
                 }
 //                if (OB.equals("Device_power_IS_on")) {         // 파워가 켜진 트랜잭션 실행 시간을 리스트에 저장

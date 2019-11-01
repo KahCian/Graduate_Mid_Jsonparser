@@ -1,0 +1,10 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - SubstringTest",
+            "request": "launch",
+            "mainClass": "MiddleWare.SubstringTest"
+        }
+    ]
+}

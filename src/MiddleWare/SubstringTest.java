@@ -12,7 +12,7 @@ public class SubstringTest {
         HashMap<Object, List> result = new HashMap<Object, List>();
         HashMap<String, List> result2 = new HashMap<String, List>();
         HashMap<String, Integer> result_list = new HashMap<String, Integer>();
-        String input =  new String(Files.readAllBytes(Paths.get("C:\\Users\\USER\\IdeaProjects\\MiddleWare\\src\\MiddleWare\\데이터셋2.txt")));
+        String input =  new String(Files.readAllBytes(Paths.get("C:\\Users\\USER\\IdeaProjects\\MiddleWare\\src\\MiddleWare\\데이터셋2_수정.txt")));
         String request = "attachdevice";
         Search_Json sj = new Search_Json();
         result_list = sj.Lookup_History(input);
